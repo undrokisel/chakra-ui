@@ -3,43 +3,25 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
+  Container,
+  Heading,
+  Divider,
 } from '@chakra-ui/react';
-import { Logo } from './Logo';
 import { Header } from './components/Header';
 
 function App() {
   return (
 
-
     <ChakraProvider theme={theme}>
-
-      <Header/>
-
-      {/* <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          
-          <VStack spacing={8}>
-            <Logo h="4vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box> */}
+      <Header />
+      <Container maxW="container.lg">
+        <Box py={3}>
+          <Heading as='' size='2xl' >Chakra UI Demo page</Heading>
+          <Text variant='' fontSize={'44px'}>text</Text>
+        </Box>
+        <Divider/>
+      </Container>
     </ChakraProvider>
   );
 }

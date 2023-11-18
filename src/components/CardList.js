@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardHeader, Grid, Heading, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 
 
 export const CardList = (props) => {
@@ -17,7 +17,10 @@ export const CardList = (props) => {
                                     {card.title}
                                 </Heading>
                                 <Text>{card.body}</Text>
-                                <Button as="a" variant="outline">Read more</Button>
+                                <Button
+                                    colorScheme="brand"
+                                    as="a"
+                                    variant="outline">Read more</Button>
                             </Stack>
                         )
                     })

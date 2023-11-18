@@ -9,10 +9,12 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import { Header } from './components/Header';
+import { CardList } from './components/CardList';
+import { cards } from './data/cards';
 
 function App() {
   return (
-
+    
     <ChakraProvider theme={theme}>
       <Header />
       <Container maxW="container.lg">
@@ -22,6 +24,8 @@ function App() {
         </Box>
         <Divider/>
       </Container>
+
+      <CardList cards={cards}/>
     </ChakraProvider>
   );
 }

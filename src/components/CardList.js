@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardHeader, Grid, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Card, CardBody, CardHeader, Grid, Heading, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react"
 
 
 export const CardList = (props) => {
@@ -9,13 +9,16 @@ export const CardList = (props) => {
                 {
                     cards.map(card => {
                         return (
-                            <Box key={card.title} m={2}>
+                            <Stack key={card.title} m={2}
+                                p={4}
+                                _hover={{ shadow: 'lg' }}
+                                spacing={2}>
                                 <Heading>
                                     {card.title}
                                 </Heading>
                                 <Text>{card.body}</Text>
-                                <Button>Read more</Button>
-                            </Box>
+                                <Button as="a" variant="outline">Read more</Button>
+                            </Stack>
                         )
                     })
                 }
